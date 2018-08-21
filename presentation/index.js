@@ -57,13 +57,13 @@ export default class Presentation extends React.Component {
             <ListItem>Item 1</ListItem>
             <ListItem>Item 2</ListItem>
             <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+            <ListItem>Item 5</ListItem>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+        <Slide transition={["fade"]} bgImage="https://i.imgur.com/LFb9dlQ.jpg" textColor="primary">
           <BlockQuote>
             <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
+            <Cite>Different Author</Cite>
           </BlockQuote>
         </Slide>
       </Deck>
