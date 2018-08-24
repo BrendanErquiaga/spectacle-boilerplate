@@ -32,6 +32,7 @@ import {
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 import styled from 'react-emotion';
+import preloader from "spectacle/lib/utils/preloader";
 
 const CustomQuote = styled(Quote)`
   border-left: 4px solid #000000;
@@ -41,8 +42,24 @@ const Hidden = styled(Text)`
   visibility: hidden;
 `;
 
+const images = {
+  clue: require('../assets/images/clue.jpg'),
+  scrabble: require('../assets/images/scrabble.jpg'),
+  chutes: require('../assets/images/chutes.jpg'),
+  mouse: require('../assets/images/mouse_trap.jpg'),
+  battleship: require('../assets/images/battleship.jpg'),
+  candyland: require('../assets/images/candyland.jpg'),
+  landlords: require('../assets/images/landlords.jpg'),
+  monopoly: require('../assets/images/monopoly.jpg'),
+  risk: require('../assets/images/risk.jpg'),
+  sorry: require('../assets/images/sorry.jpg'),
+  life: require('../assets/images/life.jpg')
+};
+
 // Require CSS
 require("normalize.css");
+
+preloader(images);
 
 const theme = createTheme({
   primary: "#F0F0F0",
@@ -290,35 +307,33 @@ export default class Presentation extends React.Component {
 
         <Slide bgImage="https://media.giphy.com/media/l0IynvPneUpb7SnBe/giphy.gif" transition={["slide"]}/>
 
-        <Slide transition={["slide"]} bgColor="lightGrey" bgImage="http://www.lscheffer.com/CandyLand-big.jpg" bgSize="contain"
-        notes="If you don't loathe this game you clearly haven't played since you were 6. It is terrible. Kids love it & it could not be more boring. On AVERAGE you have to take 16 turns of the most thrilling gameplay draw, count, go. Just PURE random non-sense."/>
+        <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.life.replace('/', '')} bgSize="contain" notes="This game attempts to brain washes children into becoming cookie cutter people who can't make decisions for themselves. Random chance controls how much money you start with, which opportunities you'll get, who you'll marry, and ultimately judges how happy you are based on accumulation of wealth. The 'game' of life has a horribly negative outlook, even if it is mildly accurate. How is this fun?"/>
 
-        <Slide transition={["slide"]} bgColor="lightGrey" bgImage="https://thurotdotcom.files.wordpress.com/2012/12/1-risk-header.jpg" bgSize="contain"
-        notes="Low player counts you start literally on the other side of the world. Watching your friend roll endless 6's on defense is infuritating as hell. Cards more important thatn strategy. The best strategy is to just hide in Australia & it always has been."/>
+        <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.chutes.replace('/', '')} bgSize="cover" notes="This game used to be an exploration of virtues and good deeds. As you moved around you landed on different squares with lessons & stories on them. Now it's you spinning a dial and counting the minutes until you can move onto something better in your life."/>
 
-        <Slide transition={["slide"]} bgColor="lightGrey" bgImage="https://images-na.ssl-images-amazon.com/images/I/915NTWZUtjL._SL1500_.jpg" bgSize="contain"
+        <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.monopoly.replace('/', '')} bgSize="contain"
         notes="Ok. I legitimately do not have enough time to tell you all the reasons Monopoly is terrible. The best strategy is to buy property and suck up all the houses as fast as possible, as long as you never upgrade them there will be a housing shortage and as long as you made it there first you are mathmatically in the most adventageous position. And there's NOTHING anyone can do about it. There is no counterplay. It is hopeless. You just lose slowly."/>
 
-        <Slide transition={["slide"]} bgColor="lightGrey" bgImage="https://landlordsgame.info/games/lg-1906/images/lg-1906_egc-board_inplay.jpg" bgSize="contain"
+        <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.landlords.replace('/', '')} bgSize="contain"
         notes="OH OH OH. And lets not forget Monopoly started from The Landlords Game. Originally it had two rule sets, one designed to highlight the benefits of Single Tax theory, the other one to highlight the ruthless soul sucking systems of monopolies crushing the lower class. Guess which one the Parker Brothers printed."/>
-
 
         <Slide bgImage="https://i.giphy.com/media/3ohrysPcsSCtapcqe4/source.gif" transition={["slide"]}/>
 
-        <Slide transition={["slide"]} bgColor="lightGrey" bgImage="https://img.etsystatic.com/il/14fb18/1422375371/il_570xN.1422375371_pwj8.jpg?version=0" bgSize="cover" notes="What is happening here. This never exciting. Why can't you win by sinking the battleship. In what world is this exciting..."/>
+        <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.battleship.replace('/', '')} bgSize="cover" notes="Cheating your siblings since 1931 (yea that game is old!)"/>
 
-        <Slide transition={["slide"]} bgColor="lightGrey" bgImage="https://localscrabble.files.wordpress.com/2011/11/scrabble.jpg" bgSize="cover" notes="Losing at this game REALLY makes you feel dumb, its the worst. Actually Scrabble isn't that bad, I just suck at it and my ego is very fragile."/>
+        <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.risk.replace('/', '')} bgSize="contain"
+        notes="Australia..."/>
 
-        <Slide transition={["slide"]} bgColor="lightGrey" bgImage="https://vignette.wikia.nocookie.net/board-games-galore/images/4/4b/Sorry-game-board.jpg/revision/latest?cb=20160711232701" bgSize="cover" notes="This game basically invented #sorrynotsorry. Only one person has fun in Sorry."/>
+        <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.candyland.replace('/', '')} bgSize="contain"
+        notes="A boring propaganda piece for big candy. Unjustly vilifies licorice."/>
 
-        <Slide transition={["slide"]} bgColor="lightGrey" bgImage="https://www.thesprucecrafts.com/thmb/a7QgnvT1hZz_Tqdkp7ziwDzXBPE=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/clue-58a6f5775f9b58a3c91a4cc5.jpg" bgSize="cover" notes="Turning murder mystery into checking boxes on a grid. The movie was better."/>
+        <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.mouse.replace('/', '')} bgSize="cover" notes="Game??? More like a rube goldberg machine that is played once before losing half the pieces into the void."/>
 
-        {/*Operation*/}
+        <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.sorry.replace('/', '')} bgSize="cover" notes="This game basically invented #sorrynotsorry. Only one person has fun in Sorry."/>
 
-        {/*Mouse Trap*/}
+        <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.clue.replace('/', '')} bgSize="cover" notes="Turning murder mystery into checking boxes on a grid. The movie was better."/>
 
-
-
+        <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.scrabble.replace('/', '')} bgSize="cover" notes="Win, feel smug. Lose, feel stupid. Actually Scrabble isn't that bad, I just suck at it and my ego is very fragile."/>
       </Deck>
     );
   }
