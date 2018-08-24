@@ -44,6 +44,7 @@ const Hidden = styled(Text)`
 
 const images = {
   clue: require('../assets/images/clue.jpg'),
+  logo: require('../assets/images/logo.png'),
   scrabble: require('../assets/images/scrabble.jpg'),
   chutes: require('../assets/images/chutes.jpg'),
   mouse: require('../assets/images/mouse_trap.jpg'),
@@ -56,10 +57,15 @@ const images = {
   life: require('../assets/images/life.jpg')
 };
 
+const gifs = {
+  learning: require('../assets/gifs/learning.gif')
+};
+
 // Require CSS
 require("normalize.css");
 
 preloader(images);
+preloader(gifs);
 
 const theme = createTheme({
   primary: "#F0F0F0",
@@ -76,6 +82,8 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["slide"]} transitionDuration={500} theme={theme} progress="none" bgColor="lightGrey">
+        {/*~~~~~~~~~~~~~~~~~SECTION 0 - Intro~~~~~~~~~~~~~~~~~*/}
+
         <Slide bgDarken="0.3" bgImage="https://i.imgur.com/LFb9dlQ.jpg" transition={["none"]} controls="false">
           <Heading size={1} textSize="150" lineHeight={1} margin="-150px 0 15px 0"textColor="white">
             board games
@@ -161,15 +169,17 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["fade"]} bgColor="lightGrey">
-          <Image src={"https://i.imgur.com/OaOpjWV.png"} width="190px"/>
+          <Image src={images.logo.replace('/', '')} width="190px"/>
         </Slide>
 
         <Slide transition={["spin"]} bgColor="lightGrey">
           <Heading textColor="black" size={1}>
             board games
           </Heading>
-          <Image src={"https://i.imgur.com/OaOpjWV.png"} margin="300px auto -300px auto" width="100px"/>
+          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
+
+        {/*~~~~~~~~~~~~~~~~~SECTION 1 - You know nothing~~~~~~~~~~~~~~~~~*/}
 
         <Slide bgImage="https://i.giphy.com/media/13f5iwTRuiEjjW/giphy.webp" transition={["slide"]}/>
 
@@ -186,7 +196,7 @@ export default class Presentation extends React.Component {
           <Heading textColor="black" size={4}>
             [examples of adult games]
           </Heading>
-          <Image src={"https://i.imgur.com/OaOpjWV.png"} margin="300px auto -300px auto" width="100px"/>
+          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
 
         <Slide bgImage="https://i.giphy.com/media/A9KfKenpqNDfa/giphy.webp" transition={["slide"]}/>
@@ -195,7 +205,7 @@ export default class Presentation extends React.Component {
           <Heading textColor="black" size={4}>
             [examples of games for cool kids]
           </Heading>
-          <Image src={"https://i.imgur.com/OaOpjWV.png"} margin="300px auto -300px auto" width="100px"/>
+          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
@@ -211,7 +221,7 @@ export default class Presentation extends React.Component {
           <Heading textColor="black" size={4}>
             [examples of games that take 5 min]
           </Heading>
-          <Image src={"https://i.imgur.com/OaOpjWV.png"} margin="300px auto -300px auto" width="100px"/>
+          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
@@ -227,7 +237,7 @@ export default class Presentation extends React.Component {
           <Heading textColor="black" size={4}>
             [examples of games with 2 rules]
           </Heading>
-          <Image src={"https://i.imgur.com/OaOpjWV.png"} margin="300px auto -300px auto" width="100px"/>
+          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
@@ -243,7 +253,7 @@ export default class Presentation extends React.Component {
           <Heading textColor="black" size={4}>
             [price comparison slide]
           </Heading>
-          <Image src={"https://i.imgur.com/OaOpjWV.png"} margin="300px auto -300px auto" width="100px"/>
+          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
@@ -270,7 +280,7 @@ export default class Presentation extends React.Component {
           <Heading textColor="black" size={4}>
             [example of exciting games]
           </Heading>
-          <Image src={"https://i.imgur.com/OaOpjWV.png"} margin="300px auto -300px auto" width="100px"/>
+          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
 
         <Slide bgImage="https://media.giphy.com/media/11EGftT7x9FQME/giphy.gif" transition={["slide"]}/>
@@ -279,7 +289,7 @@ export default class Presentation extends React.Component {
           <Heading textColor="black" size={4}>
             [example of games that are boring]
           </Heading>
-          <Image src={"https://i.imgur.com/OaOpjWV.png"} margin="300px auto -300px auto" width="100px"/>
+          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
 
         <Slide bgImage="https://media.giphy.com/media/xUPGcqpOD13ZhkBZGE/source.gif" transition={["slide"]}/>
@@ -291,8 +301,10 @@ export default class Presentation extends React.Component {
           <Heading textColor="black" size={2}>
             games are a medium
           </Heading>
-          <Image src={"https://i.imgur.com/OaOpjWV.png"} margin="300px auto -300px auto" width="100px"/>
+          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
+
+        {/*~~~~~~~~~~~~~~~~~SECTION 2 - Digging up the Past~~~~~~~~~~~~~~~~~*/}
 
         <Slide bgImage="https://media.giphy.com/media/l0ExoFKNJ64AxcWsw/giphy.gif" transition={["spin"]}/>
 
@@ -302,7 +314,7 @@ export default class Presentation extends React.Component {
           <Heading textColor="black" size={2}>
             let's be honest <Hidden>'</Hidden>
           </Heading>
-          <Image src={"https://i.imgur.com/OaOpjWV.png"} margin="300px auto -300px auto" width="100px"/>
+          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
 
         <Slide bgImage="https://media.giphy.com/media/l0IynvPneUpb7SnBe/giphy.gif" transition={["slide"]}/>
@@ -334,6 +346,17 @@ export default class Presentation extends React.Component {
         <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.clue.replace('/', '')} bgSize="cover" notes="Turning murder mystery into checking boxes on a grid. The movie was better."/>
 
         <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.scrabble.replace('/', '')} bgSize="cover" notes="Win, feel smug. Lose, feel stupid. Actually Scrabble isn't that bad, I just suck at it and my ego is very fragile."/>
+
+        {/*~~~~~~~~~~~~~~~~~SECTION 3 - Games teach you things~~~~~~~~~~~~~~~~~*/}
+
+        <Slide bgImage="https://i.giphy.com/media/l3dj09hpsfuYkijDi/giphy.webp" transition={["spin"]}/>
+
+        <Slide transition={["slide"]} bgColor="lightGrey">
+          <Heading textColor="black" bold size={2}>
+            games give you more
+          </Heading>
+          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
+        </Slide>
       </Deck>
     );
   }
