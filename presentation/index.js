@@ -22,6 +22,7 @@ import {
   Slide,
   Spin,
   Table,
+  TableBody,
   TableHeaderItem,
   TableItem,
   TableRow,
@@ -42,6 +43,12 @@ const Hidden = styled(Text)`
   visibility: hidden;
 `;
 
+const CloseTable = styled(Table)`
+  border-spacing: 0px;
+  border-collapse: collapse;
+  transform: scale(1.0);
+`;
+
 const images = {
   clue: require('../assets/images/clue.jpg'),
   logo: require('../assets/images/logo.png'),
@@ -49,11 +56,15 @@ const images = {
   chutes: require('../assets/images/chutes.jpg'),
   mouse: require('../assets/images/mouse_trap.jpg'),
   battleship: require('../assets/images/battleship.jpg'),
+  battleshipbox: require('../assets/images/battleshipbox.jpg'),
   candyland: require('../assets/images/candyland.jpg'),
+  candylandbox: require('../assets/images/candylandbox.gif'),
   landlords: require('../assets/images/landlords.jpg'),
   monopoly: require('../assets/images/monopoly.jpg'),
   risk: require('../assets/images/risk.jpg'),
   sorry: require('../assets/images/sorry.jpg'),
+  sorrybox: require('../assets/images/sorrybox.jpg'),
+  lifebox: require('../assets/images/lifebox.jpg'),
   life: require('../assets/images/life.jpg')
 };
 
@@ -93,14 +104,16 @@ export default class Presentation extends React.Component {
           </Text>
           <Table margin="400px 0 -400px 0">
             <TableRow>
-              <TableItem>
-                <Text textSize="16" textColor="white" textAlign="right">
-                  ok not everything... also, yep meltCommentary returns! 
-                </Text>
-              </TableItem>
-              <TableItem>
-                <Image src={"https://i.imgur.com/axPL7jm.png"} align="center" margin="0 0 0 5px" height="50px"/>
-              </TableItem>
+              <TableBody>
+                <TableItem>
+                  <Text textSize="16" textColor="white" textAlign="right">
+                    ok not everything... also, yep meltCommentary returns! 
+                  </Text>
+                </TableItem>
+                <TableItem>
+                  <Image src={"https://i.imgur.com/axPL7jm.png"} align="center" margin="0 0 0 5px" height="50px"/>
+                </TableItem>
+              </TableBody>
             </TableRow>
           </Table>
         </Slide>
@@ -349,14 +362,40 @@ export default class Presentation extends React.Component {
 
         {/*~~~~~~~~~~~~~~~~~SECTION 3 - Games teach you things~~~~~~~~~~~~~~~~~*/}
 
-        <Slide bgImage="https://i.giphy.com/media/l3dj09hpsfuYkijDi/giphy.webp" transition={["spin"]}/>
+        <Slide bgImage="https://i.giphy.com/media/dILrAu24mU729pxPYN/giphy.webp" bgSize="contain" transition={["spin"]}/>
+
+        <Slide bgImage="https://i.giphy.com/media/l3dj09hpsfuYkijDi/giphy.webp" transition={["slide"]}/>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
           <Heading textColor="black" bold size={2}>
-            games give you more
+            the "classics" disrespect you
           </Heading>
           <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
+
+        <Slide transition={["slide"]} bgColor="lightGrey">
+          <CloseTable margin="-200px 0 0 0" padding="0 0 0 0">
+            <TableBody >
+              <TableRow margin="0 0 0 0" padding="0 0 0 0">
+                <TableItem margin="0 0 0 0" padding="0 0 0 0" >
+                  <Image src={images.lifebox.replace('/', '')} margin="0 0 0 0" padding="0 0 0 0" height="500px" width="500px"/>
+                </TableItem>
+                <TableItem margin="0 0 0 0" padding="0 0 0 0" >
+                  <Image src={images.sorrybox.replace('/', '')} margin="0 0 0 0" padding="0 0 0 0" height="500px" width="500px"/>
+                </TableItem>
+              </TableRow>
+              <TableRow margin="0 0 0 0" padding="0 0 0 0" >
+                <TableItem margin="0 0 0 0" padding="0 0 0 0" >
+                  <Image src={images.battleshipbox.replace('/', '')} margin="0 0 0 0" padding="0 0 0 0"  height="500px" width="500px"/>
+                </TableItem>
+                <TableItem margin="0 0 0 0" padding="0 0 0 0" >
+                  <Image src={images.candylandbox.replace('/', '')} margin="0 0 0 0" padding="0 0 0 0" height="500px" width="500px"/>
+                </TableItem>
+              </TableRow>
+            </TableBody>
+          </CloseTable>
+        </Slide>
+
       </Deck>
     );
   }
