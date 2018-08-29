@@ -54,6 +54,11 @@ const BigFill = styled(Fill)`
 `;
 
 const images = {
+  acquire: require('../assets/images/acquire.jpg'),
+  container: require('../assets/images/container.jpg'),
+  explodingkittens: require('../assets/images/explodingkittens.png'),
+  catchphrase: require('../assets/images/catchphrase.jpg'),
+  set: require('../assets/images/set.png'),
   werewolf: require('../assets/images/werewolf.jpg'),
   go: require('../assets/images/go.jpg'),
   themind: require('../assets/images/themind.png'),
@@ -280,10 +285,10 @@ export default class Presentation extends React.Component {
         <Slide transition={["slide"]} bgColor="lightGrey">
           <Layout>
             <BigFill>
-              <Image src={images.themind.replace('/', '')}/>
+              <Image src={images.set.replace('/', '')} margin="100px 0 0 0"/>
             </BigFill>
             <BigFill>
-              <Image src={images.go.replace('/', '')} margin="100px 0 0 0"/>
+              <Image src={images.go.replace('/', '')} />
             </BigFill>
           </Layout>
           <Image src={images.logo.replace('/', '')} margin="100px auto -200px auto" width="100px"/>
@@ -298,9 +303,32 @@ export default class Presentation extends React.Component {
 
         <Slide bgImage="https://i.giphy.com/media/l396InTOf9zsp2EO4/giphy.webp" transition={["slide"]} bgSize="contain"/>
 
-        <Slide transition={["slide"]} bgColor="lightGrey">
-          <Heading textColor="black" size={4}>
-            [price comparison slide]
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="movies ~$10, last 1.5 hr. Music album ~$14, last ~1h, assumes 10 plays. Video games ~$60, ~60h (super generous).">
+          <Heading textColor="black" size={5}>
+            Movies: ~$4.32/hr
+          </Heading>
+          <Heading textColor="black" size={5}>
+            Music: ~$1.40/hr
+          </Heading>
+          <Heading textColor="black" size={5}>
+            Video Games: ~$1.00/hr
+          </Heading>
+          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="assume a game is $40, plays 4 players, & takes 90m">
+          <Heading textColor="black" size={3}>
+            Board Game: ~$26.30/hr
+          </Heading>
+          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="ok now imagine you actually played that game with 4 people...extrapolate. ALSO ALSO https://www.shutupandsitdown.com/how-to-build-an-amazing-board-game-collection-for-10/">
+          <Heading textColor="black" size={3}>
+            Board Game * 4 * 1: ~$6.66/hr
+            Board Game * 4 * 2: ~$3.33/hr
+            Board Game * 4 * 3: ~$1.66/hr
+            Board Game * 4 * 4: ~$0.83/hr
           </Heading>
           <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
@@ -326,19 +354,29 @@ export default class Presentation extends React.Component {
         <Slide bgImage="https://media.giphy.com/media/ATeaW1obQfED6/giphy.gif" transition={["slide"]}/>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
-          <Heading textColor="black" size={4}>
-            [example of exciting games]
-          </Heading>
-          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
+          <Layout>
+            <BigFill>
+              <Image src={images.explodingkittens.replace('/', '')}  margin="100px 0 0 0"/>
+            </BigFill>
+            <BigFill>
+              <Image src={images.catchphrase.replace('/', '')} />
+            </BigFill>
+          </Layout>
+          <Image src={images.logo.replace('/', '')} margin="100px auto -200px auto" width="100px"/>
         </Slide>
 
         <Slide bgImage="https://media.giphy.com/media/11EGftT7x9FQME/giphy.gif" transition={["slide"]}/>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
-          <Heading textColor="black" size={4}>
-            [example of games that are boring]
-          </Heading>
-          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
+        <Layout>
+          <BigFill>
+            <Image src={images.acquire.replace('/', '')} />
+          </BigFill>
+          <BigFill>
+            <Image src={images.container.replace('/', '')} />
+          </BigFill>
+        </Layout>
+        <Image src={images.logo.replace('/', '')} margin="100px auto -200px auto" width="100px"/>
         </Slide>
 
         <Slide bgImage="https://media.giphy.com/media/xUPGcqpOD13ZhkBZGE/source.gif" transition={["slide"]}/>
