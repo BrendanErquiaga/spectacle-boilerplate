@@ -421,10 +421,10 @@ export default class Presentation extends React.Component {
         <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.chutes.replace('/', '')} bgSize="cover" notes="This game used to be an exploration of virtues and good deeds. As you moved around you landed on different squares with lessons & stories on them. Now it's you spinning a dial and counting the minutes until you can move onto something better in your life."/>
 
         <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.monopoly.replace('/', '')} bgSize="contain"
-        notes="Ok. I legitimately do not have enough time to tell you all the reasons Monopoly is terrible. The best strategy is to buy property and suck up all the houses as fast as possible, as long as you never upgrade them there will be a housing shortage and as long as you made it there first you are mathmatically in the most adventageous position. And there's NOTHING anyone can do about it. There is no counterplay. It is hopeless. You just lose slowly."/>
+        notes="Ok. I legitimately do not have enough time to tell you all the reasons Monopoly is terrible. (There is a 20 minute 99% invisible podcast on JUST this.) The best strategy is to buy property and suck up all the houses as fast as possible, as long as you never upgrade them there will be a housing shortage and as long as you made it there first you are mathmatically in the most adventageous position. And there's NOTHING anyone can do about it. There is no counterplay. It is hopeless. You just lose slowly."/>
 
         <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.landlords.replace('/', '')} bgSize="contain"
-        notes="OH OH OH. And lets not forget Monopoly started from The Landlords Game. Originally it had two rule sets, one designed to highlight the benefits of Single Tax theory, the other one to highlight the ruthless soul sucking systems of monopolies crushing the lower class. Guess which one the Parker Brothers printed."/>
+        notes="OH OH OH. And lets not forget Monopoly started from The Landlords Game. Originally it had two rule sets, one designed to highlight the benefits of Single Tax theory, the other one to highlight the ruthless soul sucking systems of monopolies crushing the lower class. Guess which one the Parker Brothers printed. The game’s creator, Lizzy Magie, patented it in 1904 and included two sets of rules."/>
 
         <Slide bgImage="https://i.giphy.com/media/3ohrysPcsSCtapcqe4/source.gif" transition={["slide"]}/>
 
