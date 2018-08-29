@@ -811,16 +811,20 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
-            <Image src={images.wife.replace('/', '')} height="800px" width="auto" margin="-150px 0 0 0"/>
+          <Layout>
+            <BigFill>
+              <Image src={images.wife.replace('/', '')} height="800px" width="auto" margin="-150px auto auto auto"/>
+            </BigFill>
+          </Layout>
         </Slide>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
           <Layout>
             <BigFill>
-              <Image src={images.wife.replace('/', '')}/>
+              <Image src={images.wife.replace('/', '')} height="600px" width="auto"/>
             </BigFill>
             <BigFill>
-              <Image src={images.sheriff.replace('/', '')}/>
+              <Image src={images.sheriff.replace('/', '')} height="600px" width="auto"/>
             </BigFill>
           </Layout>
         </Slide>
