@@ -54,6 +54,13 @@ const BigFill = styled(Fill)`
 `;
 
 const images = {
+  werewolf: require('../assets/images/werewolf.jpg'),
+  go: require('../assets/images/go.jpg'),
+  themind: require('../assets/images/themind.png'),
+  loveletter: require('../assets/images/loveletter.png'),
+  skull: require('../assets/images/skull.png'),
+  poker: require('../assets/images/poker.jpg'),
+  sushi: require('../assets/images/sushigo.png'),
   cahbox: require('../assets/images/cahbox.jpg'),
   arkwright: require('../assets/images/arkwright.jpg'),
   hitlerbox: require('../assets/images/hitlerbox.jpg'),
@@ -223,16 +230,21 @@ export default class Presentation extends React.Component {
             </BigFill>
           </Layout>
 
-          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
+          <Image src={images.logo.replace('/', '')} margin="30px auto -100px auto" width="100px"/>
         </Slide>
 
         <Slide bgImage="https://i.giphy.com/media/A9KfKenpqNDfa/giphy.webp" transition={["slide"]}/>
 
-        <Slide transition={["slide"]} bgColor="lightGrey">
-          <Heading textColor="black" size={4}>
-            [examples of games for cool kids]
-          </Heading>
-          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="Poker? Yea thats not for nerds... And this is Skulls & Roses, a game that used to be played by Biker Gangs...">
+          <Layout>
+            <BigFill>
+              <Image src={images.poker.replace('/', '')} margin="100px 0 0 0"/>
+            </BigFill>
+            <BigFill>
+              <Image src={images.skull.replace('/', '')}/>
+            </BigFill>
+          </Layout>
+          <Image src={images.logo.replace('/', '')} margin="200px auto -200px auto" width="100px"/>
         </Slide>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
@@ -245,10 +257,15 @@ export default class Presentation extends React.Component {
         <Slide bgImage="https://i.giphy.com/media/7mtVSIlPRHR1m/giphy.webp" transition={["slide"]}/>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
-          <Heading textColor="black" size={4}>
-            [examples of games that take 5 min]
-          </Heading>
-          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
+          <Layout>
+            <BigFill>
+              <Image src={images.loveletter.replace('/', '')}/>
+            </BigFill>
+            <BigFill>
+              <Image src={images.werewolf.replace('/', '')}/>
+            </BigFill>
+          </Layout>
+          <Image src={images.logo.replace('/', '')} margin="250px auto -200px auto" width="100px"/>
         </Slide>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
@@ -258,13 +275,18 @@ export default class Presentation extends React.Component {
           </BlockQuote>
         </Slide>
 
-        <Slide bgImage="https://i.giphy.com/media/1zSz5MVw4zKg0/giphy.webp" transition={["slide"]}/>
+        <Slide bgImage="https://i.giphy.com/media/1zSz5MVw4zKg0/giphy.webp" transition={["slide"]} bgSize="contain"/>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
-          <Heading textColor="black" size={4}>
-            [examples of games with 2 rules]
-          </Heading>
-          <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
+          <Layout>
+            <BigFill>
+              <Image src={images.themind.replace('/', '')}/>
+            </BigFill>
+            <BigFill>
+              <Image src={images.go.replace('/', '')} margin="100px 0 0 0"/>
+            </BigFill>
+          </Layout>
+          <Image src={images.logo.replace('/', '')} margin="100px auto -200px auto" width="100px"/>
         </Slide>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
@@ -274,7 +296,7 @@ export default class Presentation extends React.Component {
           </BlockQuote>
         </Slide>
 
-        <Slide bgImage="https://i.giphy.com/media/l396InTOf9zsp2EO4/giphy.webp" transition={["slide"]}/>
+        <Slide bgImage="https://i.giphy.com/media/l396InTOf9zsp2EO4/giphy.webp" transition={["slide"]} bgSize="contain"/>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
           <Heading textColor="black" size={4}>
