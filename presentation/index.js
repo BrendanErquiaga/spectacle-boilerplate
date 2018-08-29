@@ -59,6 +59,15 @@ const BigFill = styled(Fill)`
 `;
 
 const images = {
+  expensive: require('../assets/images/expensive.png'),
+  santamaria: require('../assets/images/santamaria.jpg'),
+  istanbul: require('../assets/images/istanbul.jpg'),
+  collection: require('../assets/images/collection.jpg'),
+  graph: require('../assets/images/graph.png'),
+  lgs: require('../assets/images/lgs.jpg'),
+  gamedepot: require('../assets/images/gamedepot.jpg'),
+  ncase: require('../assets/images/ncase.jpg'),
+  ipswitch: require('../assets/images/ipswitch.png'),
   minmax: require('../assets/images/minmax.svg'),
   theoryofgames: require('../assets/images/theoryofgames.jpg'),
   catan: require('../assets/images/catan.jpg'),
@@ -588,32 +597,128 @@ export default class Presentation extends React.Component {
           <Image src={images.logo.replace('/', '')} margin="200px auto -200px auto" width="100px"/>
         </Slide>
 
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="Min Max! (Minimax or MM)">
+          <Layout>
+            <BigFill>
+              <Image src={images.ncase.replace('/', '')} height="400px" width="auto"/>
+            </BigFill>
+          </Layout>
+
+          <Heading textColor="lightRed" bold size={3} margin="50px auto auto auto">
+            ncase.me/trust
+          </Heading>
+        </Slide>
+
         <Slide bgImage="https://i.giphy.com/media/l4q8hrNIxa0WHBw9a/source.gif" transition={["slide"]} bgSize="contain" notes="You need to diversify, don't be lego-businessman"/>
 
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="Min Max! (Minimax or MM)">
+          <Heading textColor="black" bold size={2}>
+            learn all the things
+          </Heading>
+
+          <List margin="50px auto auto 200px">
+            <Layout>
+              <Fill>
+                <ListItem>how to deal with mistakes</ListItem>
+                <ListItem>cooperation & competition</ListItem>
+                <ListItem>emotional intelligence</ListItem>
+                <ListItem>logical thinking</ListItem>
+                <ListItem>problem solving</ListItem>
+                <ListItem>planning</ListItem>
+              </Fill>
+            </Layout>
+          </List>
+
+          <Image src={images.logo.replace('/', '')} margin="200px auto -100px auto" width="100px"/>
+        </Slide>
+
+        <Slide bgImage="https://i.giphy.com/media/uzZh2psw4J3ri/giphy.webp" transition={["slide"]} bgSize="contain" notes="The good news is all of this happens passively, you don't have to think about it."/>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="Board games can even be used to treat mental health problems, take that movies. http://www.ipswichstar.co.uk/news/ipswich-library-using-board-games-to-tackle-mental-health-issues-and-loneliness-1-5645544">
+          <Layout>
+            <BigFill>
+              <Image src={images.ipswitch.replace('/', '')} height="800px" width="auto" margin="-100px auto auto auto"/>
+            </BigFill>
+          </Layout>
+
+          <Image src={images.logo.replace('/', '')} margin="30px auto -100px auto" width="100px"/>
+        </Slide>
+
+        {/*~~~~~~~~~~~~~~~~~SECTION 4 - Board games as a hobby!~~~~~~~~~~~~~~~~~*/}
+
+        <Slide bgImage="https://i.giphy.com/media/j5QcmXoFWl4Q0/giphy.webp" transition={["spin"]} bgSize="contain" notes="All right all right, games are cool. Obviously I've convinced you. What else"/>
+
+        <Slide bgImage={images.lgs.replace('/', '')} transition={["slide"]} bgDarken="0.1" notes="Friendly Local Game Store"/>
+
+        <Slide bgImage={images.gamedepot.replace('/', '')} transition={["slide"]} notes="Game Depot, Southern & McClintock. The gentleman on the right & his wife own & run the store. They are SUPER nice & friendly, they will answer any of your questions & always have a great selection of games."/>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="According to this total real & accurate graph I made games are bigger than ever">
+          <Layout>
+            <BigFill>
+              <Image src={images.graph.replace('/', '')} margin="-50px auto auto auto"/>
+            </BigFill>
+          </Layout>
+
+          <Image src={images.logo.replace('/', '')} margin="150px auto -100px auto" width="100px"/>
+        </Slide>
+
+        <Slide bgImage={images.collection.replace('/', '')} transition={["slide"]} notes="The sheer number of games you can buy these days is bonkers"/>
+
+        <Slide bgImage="https://media.giphy.com/media/eLAHxY9cYXdO8/giphy.gif" transition={["spin"]} bgSize="contain" notes="Not only can you buy tons of games, you can buy games about anything you can imagine. Trains, Farming, being a spy, being a robot, making robots, making factories that make robots. Seriously if you can think it, there's probably a game for it."/>
+
+        <Slide bgImage="https://i.giphy.com/media/xT9KVmZwJl7fnigeAg/giphy.webp" transition={["slide"]} bgSize="contain" notes="Now, I have to pause & talk about the bad parts of this hobby, because I'm a unbiased presenter & I want to give it to you straight."/>
+
+        <Slide bgImage="https://media.giphy.com/media/l0HlvtIPzPdt2usKs/giphy.gif" transition={["slide"]} bgSize="contain" notes="Sometimes people in your 'Friendly local game store' can be downright creepy, especially if your a woman."/>
+
+        <Slide bgImage="https://media.giphy.com/media/l0MYQHkVjWEH7N3ig/giphy.gif" transition={["slide"]} bgSize="contain" notes="This is obviously not ok. Its a big problem and the community is currently going through a slow process to change the culture but I just wanted to make you aware it exists."/>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="These two games are also great examples of another common problem in board games. Namely diversity and hand waving human tragedy. Santa Maria glorifies colonialism & ignores the fact that the 'laborers' you are acquiring is actually you capturing indiginous people and placing them in indentured servitude. And Istanbul has ~82 characters depicted in the cards and board, annnnnd none of them are women... And these are just two examples of naive culutural framing that is persistent in board games, especially from older entries.">
+          <Layout margin="-200px auto auto auto">
+            <BigFill>
+              <Image src={images.santamaria.replace('/', '')} margin="100px 0 0 0"/>
+            </BigFill>
+            <BigFill>
+              <Image src={images.istanbul.replace('/', '')} />
+            </BigFill>
+          </Layout>
+
+          <Image src={images.logo.replace('/', '')} margin="50px auto -100px auto" width="100px"/>
+        </Slide>
+
+        <Slide bgImage="https://media.giphy.com/media/nh9k1qzeLf99S/giphy.gif" transition={["slide"]} bgSize="contain" notes="Ok one last negative before we move back into happy stuff. Games as a hobby has this very subtle problem. Because new games keep coming out, and because of rampant consumerism, which is only promoted by 'influencers', there is a big push to keep buying games. And frankly they aren't all that good..."/>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes=" ">
+          <Layout>
+            <BigFill>
+              <Image src={images.expensive.replace('/', '')} height="150px" width="auto"/>
+            </BigFill>
+          </Layout>
+
+          <Image src={images.logo.replace('/', '')} margin="300px auto -150px auto" width="100px"/>
+        </Slide>
+
+        <Slide bgImage="https://media.giphy.com/media/ALvdHigd2gBqw/giphy.gif" transition={["slide"]} bgSize="contain" notes="I think these kinds of issues are becoming more and more visible to the community so we can only hope they get better."/>
+
+        {/*~~~~~~~~~~~~~~~~~SECTION 5 - If you don't play games you don't love your family~~~~~~~~~~~~~~~~~*/}
+
+        <Slide bgImage="https://media.giphy.com/media/l0HlJiVs2oAtVet0c/giphy.gif" transition={["spin"]} bgSize="contain" notes="I think these kinds of issues are becoming more and more visible to the community so we can only hope they get better."/>
+
+
+
+
+
+        {/*~~~~~~~~~~~~~~~~~SECTION 6 - Ok fine... You convinced me... how do I do this, where should I start~~~~~~~~~~~~~~~~~*/}
+        
+        {/*~~~~~~~~~~~~~~~~~SECTION 7 - Outro~~~~~~~~~~~~~~~~~*/}
+
+
         {/* PLAN:
-            Mention great things games can teach you, maybe 1 more example
-            Talk about board games as a hobby, don't skip the negatives
             Get into the "If you don't play board games you don't love your family spheal"
             Talk about HOW to get into the hobby
             OUTRO.
             Try not to cry as you have to finish all of this tomorrow...
         */}
 
-
-        {/* THINGS TO TALK ABOUT
-            Reflective Thinking
-            Planning
-            Problem Solving
-            Decision Making
-            Logical Thinking
-            Emotional Intelligence
-            Cooperation
-            Competition
-            How to Deal with Mistakes
-            Deferring Gratification; and so on
-
-            https://geekandsundry.com/9-life-lessons-learned-from-board-games/
-        */}
 
 
         {/*NOTE LINK TO ncase trust: https://ncase.me/trust/*/}
