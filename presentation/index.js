@@ -49,11 +49,21 @@ const CloseTable = styled(Table)`
   transform: scale(1.0);
 `;
 
+const BorderTableItem = styled(TableItem)`
+  border: 1px solid #000000;
+  border-collapse: collapse;
+`;
+
 const BigFill = styled(Fill)`
   padding: 10px;
 `;
 
 const images = {
+  minmax: require('../assets/images/minmax.svg'),
+  theoryofgames: require('../assets/images/theoryofgames.jpg'),
+  catan: require('../assets/images/catan.jpg'),
+  yahtzee: require('../assets/images/yahtzee.jpg'),
+  incan: require('../assets/images/incan.jpg'),
   acquire: require('../assets/images/acquire.jpg'),
   container: require('../assets/images/container.jpg'),
   explodingkittens: require('../assets/images/explodingkittens.png'),
@@ -368,21 +378,21 @@ export default class Presentation extends React.Component {
         <Slide bgImage="https://media.giphy.com/media/11EGftT7x9FQME/giphy.gif" transition={["slide"]}/>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
-        <Layout>
-          <BigFill>
-            <Image src={images.acquire.replace('/', '')} />
-          </BigFill>
-          <BigFill>
-            <Image src={images.container.replace('/', '')} />
-          </BigFill>
-        </Layout>
-        <Image src={images.logo.replace('/', '')} margin="100px auto -200px auto" width="100px"/>
+          <Layout>
+            <BigFill>
+              <Image src={images.acquire.replace('/', '')} />
+            </BigFill>
+            <BigFill>
+              <Image src={images.container.replace('/', '')} />
+            </BigFill>
+          </Layout>
+          <Image src={images.logo.replace('/', '')} margin="100px auto -200px auto" width="100px"/>
         </Slide>
 
         <Slide bgImage="https://media.giphy.com/media/xUPGcqpOD13ZhkBZGE/source.gif" transition={["slide"]}/>
 
         <Slide bgImage="https://i.giphy.com/media/8fDi6GZUzWVPy/giphy.webp" bgColor="#000000" bgSize="contain" bgRepeat="no-repeat" transition={["fade"]}/>
-        <Slide bgImage="https://media.giphy.com/media/snS4j2xSV393G/giphy.gif" bgColor="#000000" bgSize="contain" bgRepeat="no-repeat" transition={["none"]}/>
+        <Slide bgImage="https://media.giphy.com/media/snS4j2xSV393G/giphy.gif" bgColor="#000000" bgSize="contain" bgRepeat="no-repeat" transition={["none"]} notes="This is Blade Runner, it was released in 1982 and it is STILL a masterpiece, shoutout Ridley Scott."/>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
           <Heading textColor="black" size={2}>
@@ -447,7 +457,7 @@ export default class Presentation extends React.Component {
           <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
 
-        <Slide transition={["slide"]} bgColor="lightGrey" notes="None of these games let you make interesting decisions. Things happen to you, you don't choose to do things.">
+        <Slide transition={["slide"]} bgColor="darkGrey" notes="None of these games let you make interesting decisions. Things happen to you, you don't choose to do things.">
           <CloseTable margin="-200px 0 0 0" padding="0 0 0 0">
             <TableBody >
               <TableRow margin="0 0 0 0" padding="0 0 0 0">
@@ -469,6 +479,144 @@ export default class Presentation extends React.Component {
             </TableBody>
           </CloseTable>
         </Slide>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="Push your luck games inheritenly let you make more interesting decisions (hint there's a reason gambling is addictive)">
+          <Layout>
+            <BigFill>
+              <Image src={images.incan.replace('/', '')} height="500px" width="auto"/>
+            </BigFill>
+          </Layout>
+
+          <Image src={images.logo.replace('/', '')} margin="30px auto -100px auto" width="100px"/>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="darkGrey">
+          <Layout>
+            <BigFill>
+              <Image src={images.clue.replace('/', '')}/>
+            </BigFill>
+            <BigFill>
+              <Image src={images.yahtzee.replace('/', '')} margin="20px 0 0 0"/>
+            </BigFill>
+          </Layout>
+
+          <Image src={images.logo.replace('/', '')} margin="100px auto -100px auto" width="100px"/>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="Player interaction is essential to winning in Catan">
+          <Layout>
+            <BigFill>
+              <Image src={images.catan.replace('/', '')} height="500px" width="auto"/>
+            </BigFill>
+          </Layout>
+
+          <Image src={images.logo.replace('/', '')} margin="30px auto -100px auto" width="100px"/>
+        </Slide>
+
+        <Slide bgImage="https://cdn.shopify.com/s/files/1/1134/2518/products/Screen_Shot_2017-11-07_at_4.24.35_PM_1024x1024.png?v=1511264949" transition={["slide"]} notes="Classic games are like marshmallows... Lets dream to do better shall we?"/>
+
+        <Slide bgImage="https://i.giphy.com/media/8PnbQkG5uCl0s/giphy.webp" transition={["slide"]} notes="Shoutout point break."/>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="If we take a brief detour into the world of mathmatics... In 1944 John von Neumann & Oskar Morgenstern publish...">
+          <Layout>
+            <BigFill>
+              <Image src={images.theoryofgames.replace('/', '')} height="500px" width="auto"/>
+            </BigFill>
+          </Layout>
+
+          <Image src={images.logo.replace('/', '')} margin="30px auto -100px auto" width="100px"/>
+        </Slide>
+
+        <Slide bgImage="https://i.giphy.com/media/Fjr6v88OPk7U4/giphy.webp" transition={["slide"]} bgSize="contain" notes="OK FINE. Just because I took Game Design classes doesn't mean you want to. Lets just hit the highlights"/>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="Min Max! (Minimax or MM)">
+          <Layout>
+            <BigFill>
+              <Image src={images.minmax.replace('/', '')} height="400px" width="auto"/>
+            </BigFill>
+          </Layout>
+
+          <Image src={images.logo.replace('/', '')} margin="30px auto -100px auto" width="100px"/>
+        </Slide>
+
+        <Slide bgImage="https://i.giphy.com/media/ZikyVyLF7aEaQ/giphy.webp" transition={["slide"]} bgSize="contain" notes="The prisoners dilemma"/>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="TABLES">
+          <CloseTable>
+            <TableBody >
+              <TableHeaderItem>
+              </TableHeaderItem>
+              <TableHeaderItem>
+                <Text bold textColor="darkRed">
+                  Cooperate (B)
+                </Text>
+              </TableHeaderItem>
+              <TableHeaderItem>
+                <Text bold textColor="darkRed">
+                  Defect (B)
+                </Text>
+              </TableHeaderItem>
+              <TableRow>
+                <TableItem>
+                  <Text bold>
+                    Cooperate (A)
+                  </Text>
+                </TableItem>
+                <BorderTableItem>
+                  <Text textColor="darkGrey">0, 0</Text>
+                </BorderTableItem>
+                <BorderTableItem>
+                  <Text textColor="lightRed">0, -15</Text>
+                </BorderTableItem>
+              </TableRow>
+              <TableRow>
+                <TableItem>
+                  <Text bold>
+                    Defect (A)
+                  </Text>
+                </TableItem>
+                <BorderTableItem textColor="darkGrey" textSize="50px">
+                  <Text textColor="lightRed">0, -15</Text>
+                </BorderTableItem>
+                <BorderTableItem>
+                  <Text textColor="darkRed">-10, -10</Text>
+                </BorderTableItem>
+              </TableRow>
+            </TableBody>
+          </CloseTable>
+
+          <Image src={images.logo.replace('/', '')} margin="200px auto -200px auto" width="100px"/>
+        </Slide>
+
+        <Slide bgImage="https://i.giphy.com/media/l4q8hrNIxa0WHBw9a/source.gif" transition={["slide"]} bgSize="contain" notes="You need to diversify, don't be lego-businessman"/>
+
+        {/* PLAN:
+            Mention great things games can teach you, maybe 1 more example
+            Talk about board games as a hobby, don't skip the negatives
+            Get into the "If you don't play board games you don't love your family spheal"
+            Talk about HOW to get into the hobby
+            OUTRO.
+            Try not to cry as you have to finish all of this tomorrow...
+        */}
+
+
+        {/* THINGS TO TALK ABOUT
+            Reflective Thinking
+            Planning
+            Problem Solving
+            Decision Making
+            Logical Thinking
+            Emotional Intelligence
+            Cooperation
+            Competition
+            How to Deal with Mistakes
+            Deferring Gratification; and so on
+
+            https://geekandsundry.com/9-life-lessons-learned-from-board-games/
+        */}
+
+
+        {/*NOTE LINK TO ncase trust: https://ncase.me/trust/*/}
 
       </Deck>
     );
