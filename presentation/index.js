@@ -49,7 +49,14 @@ const CloseTable = styled(Table)`
   transform: scale(1.0);
 `;
 
+const BigFill = styled(Fill)`
+  padding: 10px;
+`;
+
 const images = {
+  cahbox: require('../assets/images/cahbox.jpg'),
+  arkwright: require('../assets/images/arkwright.jpg'),
+  hitlerbox: require('../assets/images/hitlerbox.jpg'),
   clue: require('../assets/images/clue.jpg'),
   logo: require('../assets/images/logo.png'),
   scrabble: require('../assets/images/scrabble.jpg'),
@@ -203,12 +210,19 @@ export default class Presentation extends React.Component {
           </BlockQuote>
         </Slide>
 
-        <Slide bgImage="https://i.giphy.com/media/hPPx8yk3Bmqys/source.gif" transition={["slide"]}/>
+        <Slide bgImage="https://i.giphy.com/media/hPPx8yk3Bmqys/source.gif" transition={["slide"]} bgSize="contain"/>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
-          <Heading textColor="black" size={4}>
-            [examples of adult games]
-          </Heading>
+          <Layout>
+            <BigFill>
+              <Image src={images.cahbox.replace('/', '')} margin="100px 0 0 0"/>
+              <Image src={images.hitlerbox.replace('/', '')}/>
+            </BigFill>
+            <BigFill>
+              <Image src={images.arkwright.replace('/', '')}/>
+            </BigFill>
+          </Layout>
+
           <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
 
@@ -373,7 +387,7 @@ export default class Presentation extends React.Component {
           <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
 
-        <Slide transition={["slide"]} bgColor="lightGrey">
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="None of these games let you make interesting decisions. Things happen to you, you don't choose to do things.">
           <CloseTable margin="-200px 0 0 0" padding="0 0 0 0">
             <TableBody >
               <TableRow margin="0 0 0 0" padding="0 0 0 0">
