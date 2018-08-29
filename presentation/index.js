@@ -59,6 +59,19 @@ const BigFill = styled(Fill)`
 `;
 
 const images = {
+  cattle: require('../assets/images/cattle.png'),
+  dad: require('../assets/images/dad.jpg'),
+  dadplaying: require('../assets/images/dadplaying.jpg'),
+  dutchbelt: require('../assets/images/dutchbelt.jpg'),
+  sheriff: require('../assets/images/sheriff.jpg'),
+  wife: require('../assets/images/wife.jpg'),
+  clogs: require('../assets/images/clogs.jpg'),
+  familygametime: require('../assets/images/familygametime.jpg'),
+  gametime: require('../assets/images/gametime.jpg'),
+  movietheater: require('../assets/images/movietheater.jpg'),
+  netflix: require('../assets/images/netflix.jpg'),
+  netflixcommercial: require('../assets/images/netflixcommercial.jpg'),
+  thumbsup: require('../assets/images/thumbsup.jpg'),
   expensive: require('../assets/images/expensive.png'),
   santamaria: require('../assets/images/santamaria.jpg'),
   istanbul: require('../assets/images/istanbul.jpg'),
@@ -107,6 +120,8 @@ const images = {
 };
 
 const gifs = {
+  butwait: require('../assets/gifs/butwait.gif'),
+  tableflip: require('../assets/gifs/tableflip.gif'),
   learning: require('../assets/gifs/learning.gif')
 };
 
@@ -687,7 +702,7 @@ export default class Presentation extends React.Component {
 
         <Slide bgImage="https://media.giphy.com/media/nh9k1qzeLf99S/giphy.gif" transition={["slide"]} bgSize="contain" notes="Ok one last negative before we move back into happy stuff. Games as a hobby has this very subtle problem. Because new games keep coming out, and because of rampant consumerism, which is only promoted by 'influencers', there is a big push to keep buying games. And frankly they aren't all that good..."/>
 
-        <Slide transition={["slide"]} bgColor="lightGrey" notes=" ">
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="For reference my collection is _already_ worth ~$1300, in no world do I _need_ to spend another thousand dollars...">
           <Layout>
             <BigFill>
               <Image src={images.expensive.replace('/', '')} height="150px" width="auto"/>
@@ -701,14 +716,125 @@ export default class Presentation extends React.Component {
 
         {/*~~~~~~~~~~~~~~~~~SECTION 5 - If you don't play games you don't love your family~~~~~~~~~~~~~~~~~*/}
 
-        <Slide bgImage="https://media.giphy.com/media/l0HlJiVs2oAtVet0c/giphy.gif" transition={["spin"]} bgSize="contain" notes="I think these kinds of issues are becoming more and more visible to the community so we can only hope they get better."/>
+        <Slide bgImage="https://media.giphy.com/media/l0HlJiVs2oAtVet0c/giphy.gif" transition={["spin"]} bgSize="contain" notes="Ok next. Lets get one thing straight. If you don't play board games."/>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="BOOOM TRUTH BOMBS">
+          <Heading size={3} bold textColor="lightRed">
+            you don't love your family <Hidden>'</Hidden>
+          </Heading>
+
+          <Image src={images.logo.replace('/', '')} margin="350px auto -250px auto" width="100px"/>
+        </Slide>
+
+        <Slide bgImage="https://media.giphy.com/media/5xtDarHn0Wg9xtk4xdm/giphy.gif" transition={["spin"]} bgSize="contain" notes="Shrug. I just call em like I see em."/>
+
+        <Slide bgImage={images.netflixcommercial.replace('/', '')} transition={["slide"]} notes="If this is you... well then you're in an ad for netflix"/>
+
+        <Slide bgImage={images.netflix.replace('/', '')} transition={["slide"]} notes="Ok if this is you... No one looks happy in this photo & I'm positive we've all been here"/>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="seriously no one cares about the other people here...">
+          <Heading size={1} bold textColor="black">
+            no engagement
+          </Heading>
+
+          <Image src={images.logo.replace('/', '')} margin="350px auto -250px auto" width="100px"/>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="seriously no one cares about the other people here...">
+          <Heading size={1} bold textColor="black">
+            don't you like your family? <Hidden>'</Hidden>
+          </Heading>
+
+          <Image src={images.logo.replace('/', '')} margin="350px auto -250px auto" width="100px"/>
+        </Slide>
+
+        <Slide bgImage={images.movietheater.replace('/', '')} transition={["slide"]} notes="If so then why are you giving them what everyone agrees is a terrible first date???"/>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="no interaction here, there's no inspiration for conversation">
+          <Heading size={1} bold textColor="black">
+            no conversation
+          </Heading>
+
+          <Image src={images.logo.replace('/', '')} margin="350px auto -250px auto" width="100px"/>
+        </Slide>
+
+        <Slide bgImage={gifs.butwait.replace('/', '')} transition={["slide"]} notes="But wait! NO I won't wait. I call shenanigans on the 'conversations' you have after binging netflix & ignoring each other. If you go around and ask your family and all you get is this: "/>
+
+        <Slide bgImage={images.thumbsup.replace('/', '')} transition={["slide"]} notes="This is NOT critical thought... There is no discovering or interesting things happening here. "/>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="Reach for a higher standard. I believe you can do better!">
+          <Heading size={1} bold textSize="150" textColor="black">
+            ಠ_ಠ
+          </Heading>
+
+          <Image src={images.logo.replace('/', '')} margin="350px auto -250px auto" width="100px"/>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="Don't you want an enriched experience? better relationships? don't you want to know more about your friends and family? if not... whats the point...">
+          <Heading size={1} bold textColor="black">
+            don't you want more? <Hidden>'</Hidden>
+          </Heading>
+
+          <Image src={images.logo.replace('/', '')} margin="350px auto -250px auto" width="100px"/>
+        </Slide>
+
+        <Slide bgImage="https://media.giphy.com/media/3o7btT1T9qpQZWhNlK/giphy.gif" transition={["slide"]} notes="If you don't want that! If you just want to surrounded by familiar warm bodies as you mindlessly consume 'conent' until the end of your days..."/>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="Then I suggest getting a pet.">
+          <Heading size={1} bold textColor="black">
+            🐶🐱🐟🐦
+          </Heading>
+
+          <Image src={images.logo.replace('/', '')} margin="350px auto -250px auto" width="100px"/>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="games provide shared experiences.">
+          <Heading size={1} bold textColor="darkRed">
+            shared experiences
+          </Heading>
+
+          <Image src={images.logo.replace('/', '')} margin="350px auto -250px auto" width="100px"/>
+        </Slide>
+
+        <Slide bgImage={images.gametime.replace('/', '')} transition={["slide"]} notes="These are memories that will last a lifetime, look at the smile on Andy's face right now! He probably remembers Jake being the biggest traitor camelot has ever seen."/>
+
+        <Slide bgImage={images.familygametime.replace('/', '')} bgSize="contain" bgRepeat="no-repeat" transition={["slide"]} notes="And not just nerds, this is my family preventing worldwide epidemics, look how happy."/>
+
+        <Slide bgImage={images.clogs.replace('/', '')} bgSize="contain" transition={["slide"]} notes="And frankly games let you have moments like this. Yes those are traditional Dutch clogs my old roommates, & those are obviously my beautiful legs."/>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="games provide shared experiences.">
+          <Heading size={1} bold textColor="black">
+            story time
+          </Heading>
+
+          <Image src={images.logo.replace('/', '')} margin="350px auto -250px auto" width="100px"/>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="lightGrey">
+            <Image src={images.wife.replace('/', '')} height="800px" width="auto" margin="-150px 0 0 0"/>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="lightGrey">
+          <Layout>
+            <BigFill>
+              <Image src={images.wife.replace('/', '')}/>
+            </BigFill>
+            <BigFill>
+              <Image src={images.sheriff.replace('/', '')}/>
+            </BigFill>
+          </Layout>
+        </Slide>
 
 
-
-
+        {/*
+          Family Game Time
+          Story Time - Wife
+          Story Time - Father (mention there are fewer than 1000 pure bred dutch belted cows left in the world)
+          Games will TEACH you things about your family, these are powerful moments that you shouldn't miss out on. (Dutch belted, also known as Lakenvelder)
+        */}
 
         {/*~~~~~~~~~~~~~~~~~SECTION 6 - Ok fine... You convinced me... how do I do this, where should I start~~~~~~~~~~~~~~~~~*/}
-        
+
         {/*~~~~~~~~~~~~~~~~~SECTION 7 - Outro~~~~~~~~~~~~~~~~~*/}
 
 
