@@ -63,6 +63,7 @@ const BigImage = styled(Image)`
 `;
 
 const images = {
+  monikers: require('../assets/images/monikers.jpg'),
   viticulture: require('../assets/images/viticulture.jpg'),
   kingdomino: require('../assets/images/kingdomino.jpg'),
   btc: require('../assets/images/btc.jpg'),
@@ -158,7 +159,7 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["slide"]} transitionDuration={500} theme={theme} progress="none" bgColor="lightGrey">
-        {/*~~~~~~~~~~~~~~~~~SECTION 0 - Intro~~~~~~~~~~~~~~~~~
+        {/*~~~~~~~~~~~~~~~~~SECTION 0 - Intro~~~~~~~~~~~~~~~~~*/}
 
         <Slide bgDarken="0.3" bgImage="https://i.imgur.com/LFb9dlQ.jpg" transition={["none"]} controls="false">
           <Heading size={1} textSize="150" lineHeight={1} margin="-150px 0 15px 0"textColor="white">
@@ -257,7 +258,7 @@ export default class Presentation extends React.Component {
           <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
 
-        {/*~~~~~~~~~~~~~~~~~SECTION 1 - You know nothing~~~~~~~~~~~~~~~~~
+        {/*~~~~~~~~~~~~~~~~~SECTION 1 - You know nothing~~~~~~~~~~~~~~~~~*/}
 
         <Slide bgImage="https://i.giphy.com/media/13f5iwTRuiEjjW/giphy.webp" transition={["slide"]}/>
 
@@ -443,7 +444,7 @@ export default class Presentation extends React.Component {
           <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
 
-        {/*~~~~~~~~~~~~~~~~~SECTION 2 - Digging up the Past~~~~~~~~~~~~~~~~~
+        {/*~~~~~~~~~~~~~~~~~SECTION 2 - Digging up the Past~~~~~~~~~~~~~~~~~*/}
 
         <Slide bgImage="https://media.giphy.com/media/l0ExoFKNJ64AxcWsw/giphy.gif" transition={["spin"]}/>
 
@@ -486,7 +487,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.scrabble.replace('/', '')} bgSize="cover" notes="Win, feel smug. Lose, feel stupid. Actually Scrabble isn't that bad, I just suck at it and my ego is very fragile."/>
 
-        {/*~~~~~~~~~~~~~~~~~SECTION 3 - Games teach you things~~~~~~~~~~~~~~~~~
+        {/*~~~~~~~~~~~~~~~~~SECTION 3 - Games teach you things~~~~~~~~~~~~~~~~~*/}
 
         <Slide bgImage="https://i.giphy.com/media/dILrAu24mU729pxPYN/giphy.webp" bgSize="contain" transition={["spin"]}/>
 
@@ -677,7 +678,7 @@ export default class Presentation extends React.Component {
           <Image src={images.logo.replace('/', '')} margin="30px auto -100px auto" width="100px"/>
         </Slide>
 
-        {/*~~~~~~~~~~~~~~~~~SECTION 4 - Board games as a hobby!~~~~~~~~~~~~~~~~~
+        {/*~~~~~~~~~~~~~~~~~SECTION 4 - Board games as a hobby!~~~~~~~~~~~~~~~~~*/}
 
         <Slide bgImage="https://i.giphy.com/media/j5QcmXoFWl4Q0/giphy.webp" transition={["spin"]} bgSize="contain" notes="All right all right, games are cool. Obviously I've convinced you. What else"/>
 
@@ -898,6 +899,7 @@ export default class Presentation extends React.Component {
         <Slide bgImage="https://media.giphy.com/media/sDcfxFDozb3bO/giphy.gif" transition={["spin"]} bgSize="contain" notes="Obviously you can also just start building your own collection. Here are a FEW of my recommendations."/>
 
         <Slide bgImage={images.set.replace('/', '')} transition={["slide"]} bgSize="contain" notes="Set. This game is amazing. Anyone can play. It's like $10. Everyone should own it."/>
+
         <Slide bgImage={images.monikers.replace('/', '')} transition={["slide"]} bgSize="contain" notes="Monikers. This game is, wow, just perfect. I have never laughed harder. Its essentially Charades except not stupid because you are guessing from a known pool of things instead of just hopelessly shouting things into the void praying they will stick."/>
 
         <Slide transition={["slide"]} bgColor="lightGrey" notes="Ticket to ride & Catan. I'm not new in suggesting these, they basically modern day classics at this point. They are a great first step into the hobby. Lightweight enough that anyone can play without losing their mind, not so light that an experienced gamer falls asleep.">
@@ -906,7 +908,7 @@ export default class Presentation extends React.Component {
               <Image src={images.catan.replace('/', '')}/>
             </BigFill>
             <BigFill>
-              <Image src={images.ticket.replace('/', '')}/>
+              <Image src={images.ticket.replace('/', '')} margin="100px auto auto auto"/>
             </BigFill>
           </Layout>
         </Slide>
@@ -925,22 +927,25 @@ export default class Presentation extends React.Component {
         <Slide transition={["slide"]} bgColor="lightGrey" notes="Finally Viticulture. This game is a little heavier & it is far from perfect but its a solid worker placement game.">
           <Layout>
             <BigFill>
-              <Image src={images.viticulture.replace('/', '')}/>
+              <Image src={images.viticulture.replace('/', '')} margin="-50px auto auto auto"/>
             </BigFill>
+          </Layout>
         </Slide>
 
         <Slide transition={["slide"]} bgColor="lightGrey" notes="If you are going to buy. I highly recommend doing research first. These are common resources I use. There are hundreds of reviewers out there. I guarantee someone has reviewed the game you want to buy.">
-          <Heading size={4} bold textColor="black">
+          <Heading size={2} bold textColor="black">
             shut up & sit down
           </Heading>
-          <Heading size={4} bold textColor="black">
+          <Text><Hidden>.</Hidden></Text>
+          <Heading size={2} bold textColor="black">
             the dice tower
           </Heading>
-          <Heading size={4} bold textColor="black">
+          <Text><Hidden>.</Hidden></Text>
+          <Heading size={2} bold textColor="black">
             boardgamegeek.com
           </Heading>
 
-          <Image src={images.logo.replace('/', '')} margin="350px auto -250px auto" width="100px"/>
+          <Image src={images.logo.replace('/', '')} margin="250px auto -250px auto" width="100px"/>
         </Slide>
 
         <Slide bgImage="https://media.giphy.com/media/43G1ktK56yAMw/giphy.gif" transition={["spin"]} bgSize="contain" notes="Finally you can just come out and play!"/>
