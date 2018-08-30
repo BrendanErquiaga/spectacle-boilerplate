@@ -63,6 +63,12 @@ const BigImage = styled(Image)`
 `;
 
 const images = {
+  viticulture: require('../assets/images/viticulture.jpg'),
+  kingdomino: require('../assets/images/kingdomino.jpg'),
+  btc: require('../assets/images/btc.jpg'),
+  ticket: require('../assets/images/ticket.png'),
+  snakes: require('../assets/images/snakes.png'),
+  map: require('../assets/images/map.png'),
   grandparents: require('../assets/images/grandparents.jpg'),
   gwt: require('../assets/images/gwt.jpg'),
   cattle: require('../assets/images/cattle.png'),
@@ -877,20 +883,77 @@ export default class Presentation extends React.Component {
 
         {/*~~~~~~~~~~~~~~~~~SECTION 6 - Ok fine... You convinced me... how do I do this, where should I start~~~~~~~~~~~~~~~~~*/}
 
-        {/*~~~~~~~~~~~~~~~~~SECTION 7 - Outro~~~~~~~~~~~~~~~~~*/}
+        <Slide bgImage="https://media.giphy.com/media/c5gKu4AQ4Y64g/giphy.gif" transition={["spin"]} bgSize="contain" notes="Ok what now... Obviously you want to play more games, how do you go about this."/>
 
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="First things first. Game Depot is just down the road. They are seriously a great resource. Go, talk to the owners, they will know way more than I do.">
+          <Layout>
+            <BigFill>
+              <Image src={images.map.replace('/', '')}/>
+            </BigFill>
+          </Layout>
+        </Slide>
 
-        {/* PLAN:
-            Get into the "If you don't play board games you don't love your family spheal"
-            Talk about HOW to get into the hobby
-            OUTRO.
-            Try not to cry as you have to finish all of this tomorrow...
-        */}
+        <Slide bgImage={images.snakes.replace('/', '')} transition={["slide"]} bgSize="contain" bgColor="darkGrey" notes="This is Snakes and Lattes. A board game cafe that's opening soon near ASU. This will be a great way to try new games, usually you show up, buy a beer, pay ~$5 & play w/e games you want! You'll find me there a lot once they open."/>
 
+        <Slide bgImage="https://media.giphy.com/media/sDcfxFDozb3bO/giphy.gif" transition={["spin"]} bgSize="contain" notes="Obviously you can also just start building your own collection. Here are a FEW of my recommendations."/>
 
+        <Slide bgImage={images.set.replace('/', '')} transition={["slide"]} bgSize="contain" notes="Set. This game is amazing. Anyone can play. It's like $10. Everyone should own it."/>
+        <Slide bgImage={images.monikers.replace('/', '')} transition={["slide"]} bgSize="contain" notes="Monikers. This game is, wow, just perfect. I have never laughed harder. Its essentially Charades except not stupid because you are guessing from a known pool of things instead of just hopelessly shouting things into the void praying they will stick."/>
 
-        {/*NOTE LINK TO ncase trust: https://ncase.me/trust/*/}
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="Ticket to ride & Catan. I'm not new in suggesting these, they basically modern day classics at this point. They are a great first step into the hobby. Lightweight enough that anyone can play without losing their mind, not so light that an experienced gamer falls asleep.">
+          <Layout>
+            <BigFill>
+              <Image src={images.catan.replace('/', '')}/>
+            </BigFill>
+            <BigFill>
+              <Image src={images.ticket.replace('/', '')}/>
+            </BigFill>
+          </Layout>
+        </Slide>
 
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="Two of my favorites. BTC is a game where you work semi-cooperatively to build cities with the players on your left & right. And Kingdomino is as cheap as it is elegant.">
+          <Layout>
+            <BigFill>
+              <Image src={images.btc.replace('/', '')}/>
+            </BigFill>
+            <BigFill>
+              <Image src={images.kingdomino.replace('/', '')}/>
+            </BigFill>
+          </Layout>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="Finally Viticulture. This game is a little heavier & it is far from perfect but its a solid worker placement game.">
+          <Layout>
+            <BigFill>
+              <Image src={images.viticulture.replace('/', '')}/>
+            </BigFill>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="If you are going to buy. I highly recommend doing research first. These are common resources I use. There are hundreds of reviewers out there. I guarantee someone has reviewed the game you want to buy.">
+          <Heading size={4} bold textColor="black">
+            shut up & sit down
+          </Heading>
+          <Heading size={4} bold textColor="black">
+            the dice tower
+          </Heading>
+          <Heading size={4} bold textColor="black">
+            boardgamegeek.com
+          </Heading>
+
+          <Image src={images.logo.replace('/', '')} margin="350px auto -250px auto" width="100px"/>
+        </Slide>
+
+        <Slide bgImage="https://media.giphy.com/media/43G1ktK56yAMw/giphy.gif" transition={["spin"]} bgSize="contain" notes="Finally you can just come out and play!"/>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="I'm working with the funmakers, we're going to pick a night, probably in ~2 weeks. I'll bring all (or most) of my games in, I'll hang out & play with anyone whos willing.">
+          <Heading size={1} bold textColor="black">
+            melt gamenite coming soon™
+          </Heading>
+
+          <Image src={images.logo.replace('/', '')} margin="350px auto -250px auto" width="100px"/>
+        </Slide>
+
+        <Slide bgImage={gifs.tableflip.replace('/', '')} transition={["spin"]} bgSize="contain" notes="That's it I'm done! Obviously if you have questions feel free to ask. I am jumping back into the melt-games channel so you can ping me there or just walk over, I'll always talk games"/>
       </Deck>
     );
   }
