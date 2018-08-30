@@ -58,7 +58,13 @@ const BigFill = styled(Fill)`
   padding: 10px;
 `;
 
+const BigImage = styled(Image)`
+  transform: scale(1.5);
+`;
+
 const images = {
+  grandparents: require('../assets/images/grandparents.jpg'),
+  gwt: require('../assets/images/gwt.jpg'),
   cattle: require('../assets/images/cattle.png'),
   dad: require('../assets/images/dad.jpg'),
   dadplaying: require('../assets/images/dadplaying.jpg'),
@@ -146,7 +152,7 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["slide"]} transitionDuration={500} theme={theme} progress="none" bgColor="lightGrey">
-        {/*~~~~~~~~~~~~~~~~~SECTION 0 - Intro~~~~~~~~~~~~~~~~~*/}
+        {/*~~~~~~~~~~~~~~~~~SECTION 0 - Intro~~~~~~~~~~~~~~~~~
 
         <Slide bgDarken="0.3" bgImage="https://i.imgur.com/LFb9dlQ.jpg" transition={["none"]} controls="false">
           <Heading size={1} textSize="150" lineHeight={1} margin="-150px 0 15px 0"textColor="white">
@@ -245,7 +251,7 @@ export default class Presentation extends React.Component {
           <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
 
-        {/*~~~~~~~~~~~~~~~~~SECTION 1 - You know nothing~~~~~~~~~~~~~~~~~*/}
+        {/*~~~~~~~~~~~~~~~~~SECTION 1 - You know nothing~~~~~~~~~~~~~~~~~
 
         <Slide bgImage="https://i.giphy.com/media/13f5iwTRuiEjjW/giphy.webp" transition={["slide"]}/>
 
@@ -358,11 +364,17 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["slide"]} bgColor="lightGrey" notes="ok now imagine you actually played that game with 4 people...extrapolate. ALSO ALSO https://www.shutupandsitdown.com/how-to-build-an-amazing-board-game-collection-for-10/">
-          <Heading textColor="black" size={3}>
-            Board Game * 4 * 1: ~$6.66/hr
-            Board Game * 4 * 2: ~$3.33/hr
-            Board Game * 4 * 3: ~$1.66/hr
-            Board Game * 4 * 4: ~$0.83/hr
+          <Heading textColor="black" size={5}>
+            Board Game(4) * 1: ~$6.66/hr
+          </Heading>
+          <Heading textColor="black" size={5}>
+            Board Game(4) * 2: ~$3.33/hr
+          </Heading>
+          <Heading textColor="black" size={5}>
+            Board Game(4) * 3: ~$1.66/hr
+          </Heading>
+          <Heading textColor="black" size={5}>
+            Board Game(4) * 4: ~$0.83/hr
           </Heading>
           <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
@@ -425,7 +437,7 @@ export default class Presentation extends React.Component {
           <Image src={images.logo.replace('/', '')} margin="300px auto -300px auto" width="100px"/>
         </Slide>
 
-        {/*~~~~~~~~~~~~~~~~~SECTION 2 - Digging up the Past~~~~~~~~~~~~~~~~~*/}
+        {/*~~~~~~~~~~~~~~~~~SECTION 2 - Digging up the Past~~~~~~~~~~~~~~~~~
 
         <Slide bgImage="https://media.giphy.com/media/l0ExoFKNJ64AxcWsw/giphy.gif" transition={["spin"]}/>
 
@@ -468,7 +480,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["slide"]} bgColor="lightGrey" bgImage={images.scrabble.replace('/', '')} bgSize="cover" notes="Win, feel smug. Lose, feel stupid. Actually Scrabble isn't that bad, I just suck at it and my ego is very fragile."/>
 
-        {/*~~~~~~~~~~~~~~~~~SECTION 3 - Games teach you things~~~~~~~~~~~~~~~~~*/}
+        {/*~~~~~~~~~~~~~~~~~SECTION 3 - Games teach you things~~~~~~~~~~~~~~~~~
 
         <Slide bgImage="https://i.giphy.com/media/dILrAu24mU729pxPYN/giphy.webp" bgSize="contain" transition={["spin"]}/>
 
@@ -659,7 +671,7 @@ export default class Presentation extends React.Component {
           <Image src={images.logo.replace('/', '')} margin="30px auto -100px auto" width="100px"/>
         </Slide>
 
-        {/*~~~~~~~~~~~~~~~~~SECTION 4 - Board games as a hobby!~~~~~~~~~~~~~~~~~*/}
+        {/*~~~~~~~~~~~~~~~~~SECTION 4 - Board games as a hobby!~~~~~~~~~~~~~~~~~
 
         <Slide bgImage="https://i.giphy.com/media/j5QcmXoFWl4Q0/giphy.webp" transition={["spin"]} bgSize="contain" notes="All right all right, games are cool. Obviously I've convinced you. What else"/>
 
@@ -741,7 +753,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["slide"]} bgColor="lightGrey" notes="seriously no one cares about the other people here...">
-          <Heading size={1} bold textColor="black">
+          <Heading size={3} bold textColor="black">
             don't you like your family? <Hidden>'</Hidden>
           </Heading>
 
@@ -771,7 +783,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["slide"]} bgColor="lightGrey" notes="Don't you want an enriched experience? better relationships? don't you want to know more about your friends and family? if not... whats the point...">
-          <Heading size={1} bold textColor="black">
+          <Heading size={2} bold textColor="black">
             don't you want more? <Hidden>'</Hidden>
           </Heading>
 
@@ -818,24 +830,50 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
+        <Slide bgImage={images.sheriff.replace('/', '')} transition={["slide"]} notes="This is Sheriff of Notingham, a wonderful game about lying through your teeth."/>
+
         <Slide transition={["slide"]} bgColor="lightGrey">
           <Layout>
             <BigFill>
               <Image src={images.wife.replace('/', '')} height="600px" width="auto"/>
             </BigFill>
             <BigFill>
-              <Image src={images.sheriff.replace('/', '')} height="600px" width="auto"/>
+              <Image src={images.sheriff.replace('/', '')} height="400px" width="auto" margin="100px auto auto auto"/>
             </BigFill>
           </Layout>
         </Slide>
 
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="This is my father. Things you need to know about him for this story. He is 55 years old & he grew up on a cattle ranch.">
+          <Layout>
+            <BigFill>
+              <Image src={images.dad.replace('/', '')} height="800px" width="auto" margin="-75px auto auto auto"/>
+            </BigFill>
+          </Layout>
+        </Slide>
 
-        {/*
-          Family Game Time
-          Story Time - Wife
-          Story Time - Father (mention there are fewer than 1000 pure bred dutch belted cows left in the world)
-          Games will TEACH you things about your family, these are powerful moments that you shouldn't miss out on. (Dutch belted, also known as Lakenvelder)
-        */}
+        <Slide bgImage={images.gwt.replace('/', '')} transition={["slide"]} bgSize="contain" notes="This is Great Western Trail, a fabulous game about moving herds of cattle from Texas to Kansas City."/>
+
+        <Slide bgImage={images.dadplaying.replace('/', '')} transition={["slide"]} bgSize="contain" notes="This is my father playing Great Western Trail, which sidenote proves anyone can play games if they are willing to try. But let me tell you a thing that happened when we were playing this game. "/>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="So in GWT you collect these cattle cards, which represent your herd. As you can see they are comprised of different cattle breeds, and one breed in particular stood out to me when we were playing.">
+          <Layout>
+            <BigFill>
+              <BigImage src={images.cattle.replace('/', '')}/>
+            </BigFill>
+          </Layout>
+        </Slide>
+
+        <Slide bgImage={images.dutchbelt.replace('/', '')} transition={["slide"]} bgSize="contain" notes="The Dutch Belt, also known as Lakenvelder. They get their name because they were prized by Dutch royalty, but anyway I thought they were pretty funny so I asked dad if they ever had any Dutch Belts. He said 'yes we did but usually not for very long, your grandfather didn't like them very much. I obviously asked why, so he said that the Dutch Belts have very strong genetics so if you let them mix with your herd your other cattle will start 'throwing belts', and my grandfather was very particular about his cows looking the way they were supposed to, so when things weren't to his liking he sold them off early."/>
+
+        <Slide transition={["slide"]} bgColor="lightGrey" notes="Here are my grandparents. Its not a lot, but that's a detail I never knew about my grandfather. I _spent_ several summers on that cattle farm with him & it never came up. I'm 30 years old & my father & I have never talked about it. I only learned about it because we played this game together, and that's a powerful moment that you shouldn't miss out on.">
+          <Layout>
+            <BigFill>
+              <Image src={images.grandparents.replace('/', '')}/>
+            </BigFill>
+          </Layout>
+        </Slide>
+
+        <Slide bgImage="https://media.giphy.com/media/l0MYKIMz67jROaUvK/giphy.gif" transition={["slide"]} bgSize="contain" notes="Whew. Yea, if that doesn't convince you board games are worth playing then really I've got nothing for you. From here on out I'm assuming I've got you hooked. "/>
 
         {/*~~~~~~~~~~~~~~~~~SECTION 6 - Ok fine... You convinced me... how do I do this, where should I start~~~~~~~~~~~~~~~~~*/}
 
