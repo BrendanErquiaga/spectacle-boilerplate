@@ -418,7 +418,7 @@ export default class Presentation extends React.Component {
           <Image src={images.logo.replace('/', '')} margin="100px auto -200px auto" width="100px"/>
         </Slide>
 
-        <Slide bgImage="https://media.giphy.com/media/11EGftT7x9FQME/giphy.gif" transition={["slide"]}/>
+        <Slide bgImage="https://media.giphy.com/media/11EGftT7x9FQME/giphy.gif" bgSize="contain" transition={["slide"]}/>
 
         <Slide transition={["slide"]} bgColor="lightGrey">
           <Layout>
